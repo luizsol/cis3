@@ -1,0 +1,231 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+InitStack           0x200             boot.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0x0
+LOAD boot.o
+LOAD plasma_fibonacci_2553.o
+LOAD no_os_2553.o
+
+.text           0x00000000      0x528
+                0x00000000                _ftext=.
+ *(.text)
+ .text          0x00000000      0x200 boot.o
+                0x000001a8                longjmp
+                0x00000000                entry
+                0x00000170                setjmp
+                0x00000134                OS_AsmInterruptInit
+                0x000001e0                OS_AsmMult
+                0x0000003c                interrupt_service_routine
+                0x000001f4                OS_Syscall
+                0x00000128                OS_AsmInterruptEnable
+ .text          0x00000200      0x158 plasma_fibonacci_2553.o
+                0x00000258                main
+                0x00000200                itoa10
+ .text          0x00000358      0x1d0 no_os_2553.o
+                0x00000358                putchar
+                0x000004f0                OS_InterruptMaskSet
+                0x0000039c                puts
+                0x000004a4                kbhit
+                0x000004c0                getch
+                0x00000464                OS_InterruptServiceRoutine
+                0x00000500                OS_Init
+                0x00000408                print_hex
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+                0x00000528                _ecode=.
+
+.reginfo        0x00000528       0x18
+ *(.reginfo)
+ .reginfo       0x00000528       0x18 boot.o
+ .reginfo       0x00000540       0x18 plasma_fibonacci_2553.o
+ .reginfo       0x00000540       0x18 no_os_2553.o
+
+.ctors
+ *(.ctors)
+
+.dtors
+ *(.dtors)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.sdeinit
+ *(.sdeinit)
+
+.sdefini
+ *(.sdefini)
+
+.rodata         0x00000540       0x21
+ *(.rodata)
+ .rodata        0x00000540       0x21 plasma_fibonacci_2553.o
+ *(.rdata)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x00000561                _etext=.
+                0x00000561                PROVIDE (etext, .)
+
+.data           0x00000561        0x0
+                0x00000561                _fdata=.
+ *(.data)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+                0x00008551                _gp=(.+0x7ff0)
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.sdata
+ *(.sdata)
+ *(.gnu.linkonce.s*)
+                0x00000561                _edata=.
+                0x00000561                PROVIDE (edata, .)
+                0x00000568                .=ALIGN(0x8)
+                0x00000561                __bss_start=.
+                0x00000568                _fbss=__bss_start
+
+.sbss           0x00000568        0x5
+ *(.sbss)
+ .sbss          0x00000568        0x5 plasma_fibonacci_2553.o
+ *(.scommon)
+
+.bss            0x00000570      0x200
+ *(.dynbss)
+ *(.bss)
+ *(COMMON)
+ COMMON         0x00000570      0x200 boot.o
+                0x00000570                InitStack
+                0x00000770                _end=.
+                0x00000770                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.mdebug
+ *(.mdebug)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.sdata
+ *(.rel.sdata)
+ *(.rel.gnu.linkonce.s*)
+
+.rela.sdata
+ *(.rela.sdata)
+ *(.rela.gnu.linkonce.s*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.gnu.linkonce.r*)
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+OUTPUT(test.axf elf32-bigmips)

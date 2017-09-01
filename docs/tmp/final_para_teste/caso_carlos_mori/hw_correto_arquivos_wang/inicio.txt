@@ -1,0 +1,38 @@
+--Elaborado por:
+--MSc. Mario Raffo : mraffo@lme.usp.br
+--Membro do GSEIS
+--Doutorando em Engenharia Elétrica
+--Universidade de São Paulo
+
+--add wave *
+view structure
+view signals
+
+
+add wave sim:/plasma_tbw/uo/clk
+add wave sim:/plasma_tbw/uo/reset
+add wave sim:/plasma_tbw/uo/address_next
+add wave sim:/plasma_tbw/uo/byte_we_next
+add wave sim:/plasma_tbw/uo/data_r
+add wave sim:/plasma_tbw/uo/data_w
+add wave sim:/plasma_tbw/uo/data_read_ram
+add wave sim:/plasma_tbw/uo/write_enable
+add wave sim:/plasma_tbw/uo/enable_internal_ram
+
+add wave sim:/plasma_tbw/uo/u1_cpu/opcode
+
+add wave sim:/plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem/ram_proc2/dual_port_ram1
+add wave sim:/plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem/ram_proc2/dual_port_ram2
+
+add wave sim:/plasma_tbw/uo/enable_perif_exp6
+add wave sim:/plasma_tbw/uo/write_enable_i_cpu_to_fibo
+add wave sim:/plasma_tbw/uo/read_enable_i_cpu_to_fibo
+add wave sim:/plasma_tbw/uo/data_in_cpu_to_fibo
+add wave sim:/plasma_tbw/uo/data_o_fibo_to_cpu
+add wave sim:/plasma_tbw/uo/irq
+add wave sim:/plasma_tbw/uo/irq_o_fibo_to_cpu
+add wave sim:/plasma_tbw/uo/irq_mask_reg
+add wave sim:/plasma_tbw/uo/irq_status
+
+
+run 1000 us

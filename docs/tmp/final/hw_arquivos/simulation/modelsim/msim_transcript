@@ -1,0 +1,431 @@
+# Reading C:/altera/91/modelsim_ase/tcl/vsim/pref.tcl 
+# do plasma_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/comparador_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity comparador_gen
+# -- Compiling architecture behavior of comparador_gen
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/datapath.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity datapath
+# -- Compiling architecture behavior of datapath
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/fibonacci.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity fibonacci
+# -- Compiling architecture behavior of fibonacci
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/fsm_fibonacci.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity fsm_fibonacci
+# -- Compiling architecture behavior of fsm_fibonacci
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/minor_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity minor_gen
+# -- Compiling architecture behavior of minor_gen
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/minor_igual_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity minor_igual_gen
+# -- Compiling architecture behavior of minor_igual_gen
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/mlite_pack.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package mlite_pack
+# -- Compiling package body mlite_pack
+# -- Loading package mlite_pack
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/multiplexor2a1_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexor2a1_gen
+# -- Compiling architecture mux2a1_gen of multiplexor2a1_gen
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity reg
+# -- Compiling architecture behavior of reg
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/reg_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity reg_gen
+# -- Compiling architecture behavior of reg_gen
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/wrapper0.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity wrapper0
+# -- Compiling architecture behavior of wrapper0
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/wrapper1.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity wrapper1
+# -- Compiling architecture behavior of wrapper1
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/somador_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity somador_gen
+# -- Compiling architecture behavioral of somador_gen
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/alu.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity alu
+# -- Compiling architecture logic of alu
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/bus_mux.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity bus_mux
+# -- Compiling architecture logic of bus_mux
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/control.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity control
+# -- Compiling architecture logic of control
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/mem_ctrl.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity mem_ctrl
+# -- Compiling architecture logic of mem_ctrl
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/mlite_cpu.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mlite_cpu
+# -- Compiling architecture logic of mlite_cpu
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/mult.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mlite_pack
+# -- Compiling entity mult
+# -- Compiling architecture logic of mult
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/pc_next.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity pc_next
+# -- Compiling architecture logic of pc_next
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/pipeline.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity pipeline
+# -- Compiling architecture logic of pipeline
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/plasma.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity plasma
+# -- Compiling architecture logic of plasma
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/ram.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package attributes
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package mlite_pack
+# -- Compiling entity ram
+# -- Compiling architecture logic of ram
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/reg_bank.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package mlite_pack
+# -- Compiling entity reg_bank
+# -- Compiling architecture ram_block of reg_bank
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/shifter.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity shifter
+# -- Compiling architecture logic of shifter
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/uart.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package attributes
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_arith
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_unsigned
+# -- Loading package mlite_pack
+# -- Compiling entity uart
+# -- Compiling architecture logic of uart
+# 
+# vcom -93 -work work {X:/psi2553/15/exp6/final/hw_arquivos/plasma_tbw.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package mlite_pack
+# -- Compiling entity plasma_tbw
+# -- Compiling architecture behavior of plasma_tbw
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L cycloneii -L rtl_work -L work -voptargs="+acc" plasma_tbw
+# vsim -L altera -L lpm -L sgate -L altera_mf -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps plasma_tbw 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.mlite_pack(body)
+# Loading work.plasma_tbw(behavior)
+# Loading work.plasma(logic)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.mlite_cpu(logic)
+# Loading work.pc_next(logic)
+# Loading work.mem_ctrl(logic)
+# Loading work.control(logic)
+# Loading work.reg_bank(ram_block)
+# Loading work.bus_mux(logic)
+# Loading work.alu(logic)
+# Loading work.shifter(logic)
+# Loading work.mult(logic)
+# Loading work.pipeline(logic)
+# Loading ieee.numeric_std(body)
+# Loading work.wrapper0(behavior)
+# Loading work.reg_gen(behavior)
+# Loading work.wrapper1(behavior)
+# Loading work.reg(behavior)
+# Loading work.fibonacci(behavior)
+# Loading work.fsm_fibonacci(behavior)
+# Loading work.datapath(behavior)
+# Loading work.multiplexor2a1_gen(mux2a1_gen)
+# Loading work.somador_gen(behavioral)
+# Loading work.minor_igual_gen(behavior)
+# Loading work.minor_gen(behavior)
+# Loading work.comparador_gen(behavior)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.ram(logic)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.uart(logic)
+# WARNING: No extended dataflow License exists
+# 
+# do X:/psi2553/15/exp6/final/hw_arquivos/inicio.txt
+# --Elaborado por:
+# --MSc. Mario Raffo : mraffo@lme.usp.br
+# --Membro do GSEIS
+# --Doutorando em Engenharia Elétrica
+# --Universidade de São Paulo
+# 
+# --add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body
+# 
+# 
+# add wave sim:/plasma_tbw/uo/clk
+# add wave sim:/plasma_tbw/uo/reset
+# add wave sim:/plasma_tbw/uo/address_next
+# add wave sim:/plasma_tbw/uo/byte_we_next
+# add wave sim:/plasma_tbw/uo/data_r
+# add wave sim:/plasma_tbw/uo/data_w
+# add wave sim:/plasma_tbw/uo/data_read_ram
+# add wave sim:/plasma_tbw/uo/write_enable
+# add wave sim:/plasma_tbw/uo/enable_internal_ram
+# 
+# add wave sim:/plasma_tbw/uo/u1_cpu/opcode
+# 
+# add wave sim:/plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem/ram_proc2/dual_port_ram1
+# add wave sim:/plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem/ram_proc2/dual_port_ram2
+# 
+# add wave sim:/plasma_tbw/uo/enable_perif_exp6
+# add wave sim:/plasma_tbw/uo/write_enable_i_cpu_to_fibo
+# add wave sim:/plasma_tbw/uo/read_enable_i_cpu_to_fibo
+# add wave sim:/plasma_tbw/uo/data_in_cpu_to_fibo
+# add wave sim:/plasma_tbw/uo/data_o_fibo_to_cpu
+# add wave sim:/plasma_tbw/uo/irq
+# add wave sim:/plasma_tbw/uo/irq_o_fibo_to_cpu
+# add wave sim:/plasma_tbw/uo/irq_mask_reg
+# add wave sim:/plasma_tbw/uo/irq_status
+# 
+# 
+# run 1000 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u3_uart
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component3
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component3
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component3
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component2
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component2
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component1
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component1
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component0
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component0
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u2_ram/altera_ram/lpm_ram_io_component0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/som2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/eq1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/min2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/mineq
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/mineq
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/som1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/fibo/u1/som1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u8_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u8_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u8_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u8_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u8_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u8_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /plasma_tbw/uo/u1_cpu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u3_uart
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 4  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 4  Instance: /plasma_tbw/uo/u1_cpu/u4_reg_bank/dual_port_mem

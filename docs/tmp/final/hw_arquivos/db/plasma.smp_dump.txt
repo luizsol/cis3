@@ -1,0 +1,19 @@
+
+State Machine - |plasma|fibonacci:fibo|fsm_fibonacci:u0|state
+Name state.est28 state.est27 state.est23n state.est22 state.est19 state.est18 state.est17 state.est16 state.est15 state.est14 state.est13 state.est12 state.est6n state.est5 state.est4 state.est0n 
+state.est0n 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.est4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.est5 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.est6n 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.est12 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.est13 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.est14 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.est15 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.est16 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.est17 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.est18 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.est19 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.est22 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.est23n 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.est27 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.est28 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

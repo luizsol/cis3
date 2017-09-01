@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jun 12 17:06:38 2015
+Quartus II 64-Bit Version : 9.1 Build 304 01/25/2010 SP 1 SJ Full Version
+Revision Name : plasma
+Top-level Entity Name : plasma
+Family : Cyclone II
+Total logic elements : 5,195
+    Total combinational functions : 4,110
+    Dedicated logic registers : 1,800
+Total registers : 1800
+Total pins : 169
+Total virtual pins : 0
+Total memory bits : 65,536
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
