@@ -103,113 +103,113 @@ BEGIN
   mux_n_max: multiplexor2a1
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      a	=>    data_in real,
-      b	=>    subtrator_n_max_1_out real,
-      sel	=>  m_max real,
-      f	=>    mux_n_max_out real);
+      a	=>    data_in,
+      b	=>    subtrator_n_max_1_out,
+      sel	=>  m_max,
+      f	=>    mux_n_max_out);
 
   mux_n_fibonacci: multiplexor2a1
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      a =>    somador_n_anterior1_n_anterior2_out real,
-      b =>    reg_n_max_out real,
-      sel =>  m_fib real,
-      f =>    mux_n_fibonacci_out real);
+      a =>    somador_n_anterior1_n_anterior2_out,
+      b =>    reg_n_max_out,
+      sel =>  m_fib,
+      f =>    mux_n_fibonacci_out);
 
   mux_n_anterior1: multiplexor2a1
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      a =>    reg_1_out real,
-      b =>    reg_n_fibonacci_out real,
-      sel =>  m_a1 real,
-      f =>    mux_n_anterior1_out real);
+      a =>    reg_1_out,
+      b =>    reg_n_fibonacci_out,
+      sel =>  m_a1,
+      f =>    mux_n_anterior1_out);
 
   mux_n_anterior2: multiplexor2a1
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      a =>    reg_0_out real,
-      b =>    reg_n_anterior1_out real,
-      sel =>  m_a2 real,
-      f =>    mux_n_anterior2_out real);
+      a =>    reg_0_out,
+      b =>    reg_n_anterior1_out,
+      sel =>  m_a2,
+      f =>    mux_n_anterior2_out);
 
   mux_data_out: multiplexor2a1
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      a =>    reg_n_fibonacci_out real,
-      b =>    reg_0_out real,
-      sel =>  m_d real,
-      f =>    mux_data_out_out real);
+      a =>    reg_n_fibonacci_out,
+      b =>    reg_0_out,
+      sel =>  m_d,
+      f =>    mux_data_out_out);
 
 -- Registradores
   reg_n_max: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      rst =>     rst real,
-      clk =>     clk real,
-      load  =>   l_max real,
-      d	  =>     mux_n_max_out real,
-      q   =>     reg_n_max_out real);
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   l_max,
+      d	  =>     mux_n_max_out,
+      q   =>     reg_n_max_out);
 
   reg_n_fibonacci: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      rst =>     rst real,
-      clk =>     clk real,
-      load  =>   l_fib real,
-      d   =>     mux_n_fibonacci_out real,
-      q   =>     reg_n_fibonacci_out real);
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   l_fib,
+      d   =>     mux_n_fibonacci_out,
+      q   =>     reg_n_fibonacci_out);
 
   reg_n_anterior1: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      rst =>     rst real,
-      clk =>     clk real,
-      load  =>   l_a1 real,
-      d   =>     mux_n_anterior1_out real,
-      q   =>     reg_n_anterior1_out real);
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   l_a1,
+      d   =>     mux_n_anterior1_out,
+      q   =>     reg_n_anterior1_out);
 
   reg_n_anterior2: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      rst =>     rst real,
-      clk =>     clk real,
-      load  =>   l_a2 real,
-      d   =>     mux_n_anterior2_out real,
-      q   =>     reg_n_anterior2_out real);
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   l_a2,
+      d   =>     mux_n_anterior2_out,
+      q   =>     reg_n_anterior2_out);
 
   reg_1: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      rst =>     rst real,
-      clk =>     clk real,
-      load  =>   rst real,
-      d   =>     (0 => '1', OTHERS => '0') real,
-      q   =>     reg_1_out real);
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   rst,
+      d   =>     (0 => '1', OTHERS => '0'),
+      q   =>     reg_1_out);
 
   reg_0: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
-      rst =>     rst real,
-      clk =>     clk real,
-      load  =>   rst real,
-      d   =>     (0 => '0', OTHERS => '0') real,
-      q   =>     reg_0_out real);
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   rst,
+      d   =>     (0 => '0', OTHERS => '0'),
+      q   =>     reg_0_out);
 
 -- Somadores
   somador_n_anterior1_n_anterior2: somador
     GENERIC MAP(NUMBITS => NUMBITS)
       PORT MAP (
-        x	=>    reg_n_anterior1_out real,
-        y	=>    reg_n_anterior2_out real,
-        XY	=>  somador_n_anterior1_n_anterior2_out real);
+        x	=>    reg_n_anterior1_out,
+        y	=>    reg_n_anterior2_out,
+        XY	=>  somador_n_anterior1_n_anterior2_out);
 
 -- Subtratores
   subtrator_n_max_1: subtrator
     GENERIC MAP(NUMBITS => NUMBITS)
       PORT MAP (
-        x =>    reg_n_max_out real,
-        y =>    reg_1_out real,
-        XY  =>  subtrator_n_max_1_out real);
+        x =>    reg_n_max_out,
+        y =>    reg_1_out,
+        XY  =>  subtrator_n_max_1_out);
 
 -- Comparadores
   igual_n_max_0_out: igual
