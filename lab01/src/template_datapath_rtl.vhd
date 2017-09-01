@@ -1,6 +1,7 @@
 -- template_datapath_rtl.vhd
---Descrição do circuito feito por Mario Raffo (11)
+-- Descrição do circuito feito por Mario Raffo (11)
 -- Jorge Gonzalez (12)
+-- Luiz Eduardo Sol (luizedusol@gmail.com)
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -14,10 +15,8 @@ ENTITY datapath IS
 	PORT (  -- Clocks e Reset
           rst     : IN STD_LOGIC;
           clk 		: IN STD_LOGIC;
-
           -- Dados
           data_in 	: IN STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
-
           -- Flags de entrada
           m_max	 	: IN STD_LOGIC;
           l_max	 	: IN STD_LOGIC;
@@ -29,12 +28,10 @@ ENTITY datapath IS
           l_a2	 	: IN STD_LOGIC;
           m_d		 	: IN STD_LOGIC;
           l_d		 	: IN STD_LOGIC;
-
           -- Flags de saída
           flag_1 		: OUT STD_LOGIC;
           flag_2 		: OUT STD_LOGIC;
           flag_3 		: OUT STD_LOGIC;
-
           -- Dados de saída
           data_out	: OUT STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0));
 END datapath;
@@ -180,24 +177,22 @@ BEGIN
       d   =>     mux_n_anterior2_out real,
       q   =>     reg_n_anterior2_out real);
 
-  -- TODO
   reg_1: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
       rst =>     rst real,
       clk =>     clk real,
       load  =>   rst real,
-      d   =>     1 real, --(?)
+      d   =>     (0 => '1', OTHERS => '0') real,
       q   =>     reg_1_out real);
 
-  -- TODO
   reg_0: reg
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
       rst =>     rst real,
       clk =>     clk real,
       load  =>   rst real,
-      d   =>     0 real, --(?)
+      d   =>     (0 => '0', OTHERS => '0') real,
       q   =>     reg_0_out real);
 
 -- Somadores
