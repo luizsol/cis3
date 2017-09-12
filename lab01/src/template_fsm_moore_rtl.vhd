@@ -1,23 +1,23 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY <nome_entidade> IS
+ENTITY fibonacci_pc IS
 	PORT ( 	rst			: IN STD_LOGIC;
 			clk 		: IN STD_LOGIC;
-			
+
 			entrada0 	: IN <tipo de dado>;
 			...
 			entradaN 	: IN <tipo de dado>;
-			
+
 			saida0 		: OUT <tipo de dado>;
 			..
 			saidaN 		: OUT <tipo de dado>);
-END <nome_entidade>;
+END fibonacci_pc;
 
-ARCHITECTURE <nome_arquitetura> OF <nome_entidade> IS
+ARCHITECTURE fsdm OF fibonacci_pc IS
 	TYPE state_type IS (estado0, estado1, estado2,.......,estadoN);  // veja quantos estados hah no seu projeto
 	SIGNAL state, next_state : state_type;
-	
+
 BEGIN
 	------------------------Lógica Sequencial-----------------------
 	SEQ: PROCESS (rst, clk)
@@ -66,13 +66,13 @@ BEGIN
 				...
 				saidaN <= <valor>;
 			...
-			...				
+			...
 			WHEN estadoN =>
 				saida1 <= <valor>;
 				...
 				saidaN <= <valor>;
-			
+
 		END CASE;
 	END PROCESS SAL;
 
-END <nome_arquitetura>;
+END fsdm;

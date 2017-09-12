@@ -10,7 +10,7 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
 
-ENTITY datapath IS
+ENTITY fibonacci_datapath IS
   GENERIC (NUMBITS	: NATURAL := 32);
 	PORT (  -- Clocks e Reset
           rst     : IN STD_LOGIC;
@@ -34,10 +34,10 @@ ENTITY datapath IS
           flag_3 		: OUT STD_LOGIC;
           -- Dados de saída
           data_out	: OUT STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0));
-END datapath;
+END fibonacci_datapath;
 
 
-ARCHITECTURE behavior OF datapath IS
+ARCHITECTURE behavior OF fibonacci_datapath IS
 
   COMPONENT somador
     GENERIC (NUMBITS	: NATURAL := 32);
