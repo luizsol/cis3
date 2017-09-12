@@ -2,16 +2,17 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY fibonacci_pc IS
-	PORT ( 	rst			: IN STD_LOGIC;
-			clk 		: IN STD_LOGIC;
+	PORT (  -- Clocks e Reset
+          rst       : IN STD_LOGIC;
+          clk       : IN STD_LOGIC;
+          -- Entradas
+          entrada0 	: IN <tipo de dado>;
+          ...
+          entradaN 	: IN <tipo de dado>;
 
-			entrada0 	: IN <tipo de dado>;
-			...
-			entradaN 	: IN <tipo de dado>;
-
-			saida0 		: OUT <tipo de dado>;
-			..
-			saidaN 		: OUT <tipo de dado>);
+          saida0 		: OUT <tipo de dado>;
+          ..
+          saidaN 		: OUT <tipo de dado>);
 END fibonacci_pc;
 
 ARCHITECTURE fsdm OF fibonacci_pc IS
