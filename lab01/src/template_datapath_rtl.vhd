@@ -93,8 +93,6 @@ ARCHITECTURE behavior OF datapath IS
   SIGNAL reg_1_out                            : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL reg_0_out                            : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL subtrator_n_max_1_out                : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
-  SIGNAL igual_n_max_1_out                    : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
-  SIGNAL igual_n_max_0_out                    : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL somador_n_anterior1_n_anterior2_out  : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
 
 
@@ -212,14 +210,14 @@ BEGIN
         XY  =>  subtrator_n_max_1_out);
 
 -- Comparadores
-  igual_n_max_0_out: igual
+  igual_n_max_0: igual
     GENERIC MAP(NUMBITS => NUMBITS)
       PORT MAP (
         a	=>    reg_n_max_out,
         b	=>    reg_0_out,
-        eq	=>  flag_1);
+        eq  =>  flag_1);
 
-  igual_n_max_1_out: igual
+  igual_n_max_1: igual
     GENERIC MAP(NUMBITS => NUMBITS)
       PORT MAP (
         a =>    reg_n_max_out,
