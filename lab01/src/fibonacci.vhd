@@ -8,7 +8,7 @@
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
@@ -28,7 +28,7 @@ END fibonacci;
 ARCHITECTURE behavior OF fibonacci IS
 
   COMPONENT fibonacci_pc
-    PORT (  -- Clocks e Reset
+    PORT (-- Clocks e Reset
           rst             : IN STD_LOGIC;
           clk             : IN STD_LOGIC;
           -- Dados de entrada
@@ -56,7 +56,7 @@ ARCHITECTURE behavior OF fibonacci IS
 
   COMPONENT fibonacci_datapath
     GENERIC (NUMBITS	: NATURAL := 32);
-    PORT (  -- Clocks e Reset
+    PORT (-- Clocks e Reset
           rst       : IN STD_LOGIC;
           clk       : IN STD_LOGIC;
           -- Dados de entrada
@@ -73,39 +73,71 @@ ARCHITECTURE behavior OF fibonacci IS
           m_d       : IN STD_LOGIC;
           l_d       : IN STD_LOGIC;
           -- Dados de saída
-          data_out  : OUT STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0)
+          data_o    : OUT STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
           -- Flags de saída
-          flag_1    : OUT STD_LOGIC;
-          flag_2    : OUT STD_LOGIC;
-          flag_3    : OUT STD_LOGIC);
+          flag1     : OUT STD_LOGIC;
+          flag2     : OUT STD_LOGIC;
+          flag3     : OUT STD_LOGIC);
 	END COMPONENT;
 
-//completar com todos os sinais necessarios para as conexoes
-	SIGNAL clk			: STD_LOGIC;
-	SIGNAL rst			: STD_LOGIC;
-	SIGNAL <nome>		: <tipo>;
-	SIGNAL <nome>		: <tipo>;
-
-
+-- Conexões
+  SIGNAL m_max    : STD_LOGIC;
+  SIGNAL l_max    : STD_LOGIC;
+  SIGNAL m_fib    : STD_LOGIC;
+  SIGNAL l_fib    : STD_LOGIC;
+  SIGNAL m_a1     : STD_LOGIC;
+  SIGNAL l_a1     : STD_LOGIC;
+  SIGNAL m_a2     : STD_LOGIC;
+  SIGNAL l_a2     : STD_LOGIC;
+  SIGNAL m_d      : STD_LOGIC;
+  SIGNAL l_d      : STD_LOGIC;
+  SIGNAL flag1    : STD_LOGIC;
+  SIGNAL flag2    : STD_LOGIC;
+  SIGNAL flag3    : STD_LOGIC;
 
 BEGIN
 
-	u0: fsm_fibonacci PORT MAP(
-				rst					=> rst,
-				clk					=> clk,
-	// completar com os portos dos componentes e sinais de conexão
-				demais nomes locais			=> demais nomes atuais,
-				demais nomes locais			=> demais nomes atuais);
+  u0: fibonacci_pc
+    PORT MAP(
+      rst             => rst,
+      clk             => clk,
+      write_enable_i  => write_enable_i,
+      read_enable_i   => read_enable_i,
+      flag1           => flag1,
+      flag2           => flag2,
+      flag3           => flag3,
+      status_o        => status_o,
+      irq_o           => irq_o,
+      m_max           => m_max,
+      l_max           => l_max,
+      m_fib           => m_fib,
+      l_fib           => l_fib,
+      m_a1            => m_a1,
+      l_a1            => l_a1,
+      m_a2            => m_a2,
+      l_a2            => l_a2,
+      m_d             => m_d,
+      l_d             => l_d);
 
-
-	u1: datapath GENERIC MAP (
-					NUMBITS => NUMBITS)
-				PORT MAP (
-					rst				=> rst,
-					clk				=> clk,
-	// completar com os portos dos componentes e sinais de conexão
-				demais nomes locais			=> demais nomes atuais,
-				demais nomes locais			=> demais nomes atuais);
-
+  u1: fibonacci_datapath
+    GENERIC MAP (NUMBITS => NUMBITS)
+    PORT MAP (
+			rst      => rst,
+			clk      => clk,
+      data_in  => data_in,
+      m_max    => m_max,
+      l_max    => l_max,
+      m_fib    => m_fib,
+      l_fib    => l_fib,
+      m_a1     => m_a1,
+      l_a1     => l_a1,
+      m_a2     => m_a2,
+      l_a2     => l_a2,
+      m_d      => m_d,
+      l_d      => l_d,
+      data_o   => data_o,
+      flag1    => flag1,
+      flag2    => flag2,
+      flag3    => flag3);
 
 END behavior;

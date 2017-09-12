@@ -227,6 +227,16 @@ BEGIN
         irq_o <= '0';
 
       WHEN estado12 =>
+        m_max <= '1';
+        l_max <= '1';
+        l_a1 <= '0';
+        l_fib <= '0';
+        l_a2 <= '0';
+        l_d <= '0';
+        status_o <= "01";
+        irq_o <= '0';
+
+      WHEN estado13 =>
         m_d <= '0';
         l_d <= '1';
         l_max <= '0';

@@ -5,7 +5,7 @@
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
@@ -28,11 +28,11 @@ ENTITY fibonacci_datapath IS
           m_d		 	  : IN STD_LOGIC;
           l_d		 	  : IN STD_LOGIC;
           -- Dados de saída
-          data_out  : OUT STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0)
+          data_o    : OUT STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
           -- Flags de saída
-          flag_1 		: OUT STD_LOGIC;
-          flag_2 		: OUT STD_LOGIC;
-          flag_3 		: OUT STD_LOGIC);
+          flag1     : OUT STD_LOGIC;
+          flag2     : OUT STD_LOGIC;
+          flag3     : OUT STD_LOGIC);
 END fibonacci_datapath;
 
 
@@ -87,8 +87,8 @@ ARCHITECTURE behavior OF fibonacci_datapath IS
   SIGNAL reg_n_anterior1_out                  : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL mux_n_anterior2_out                  : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL reg_n_anterior2_out                  : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
-  SIGNAL mux_data_out_out                     : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
-  SIGNAL reg_data_out_out                     : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
+  SIGNAL mux_data_o_out                       : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
+  SIGNAL reg_data_o_out                       : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL reg_1_out                            : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL reg_0_out                            : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
   SIGNAL subtrator_n_max_1_out                : STD_LOGIC_VECTOR(NUMBITS-1 DOWNTO 0);
@@ -129,13 +129,13 @@ BEGIN
       sel =>  m_a2,
       f =>    mux_n_anterior2_out);
 
-  mux_data_out: multiplexor2a1
+  mux_data_o: multiplexor2a1
     GENERIC MAP(NUMBITS => NUMBITS)
     PORT MAP (
       a =>    reg_n_fibonacci_out,
       b =>    reg_0_out,
       sel =>  m_d,
-      f =>    mux_data_out_out);
+      f =>    mux_data_o_out);
 
 -- Registradores
   reg_n_max: reg
@@ -214,14 +214,14 @@ BEGIN
       PORT MAP (
         a	=>    reg_n_max_out,
         b	=>    reg_0_out,
-        eq  =>  flag_1);
+        eq  =>  flag1);
 
   igual_n_max_1: igual
     GENERIC MAP(NUMBITS => NUMBITS)
       PORT MAP (
         a =>    reg_n_max_out,
         b =>    reg_1_out,
-        eq  =>  flag_2);
+        eq  =>  flag2);
 
 END behavior;
 
