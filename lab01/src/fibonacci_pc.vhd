@@ -90,7 +90,7 @@ BEGIN
         next_state <= estado13;
 
       WHEN estado8 =>
-        IF (flag3 = '1') THEN
+        IF (flag3 = '0') THEN
           next_state <= estado9;
         ELSE
           next_state <= estado13;

@@ -1,0 +1,407 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Full Version
+7
+3666
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+fibonacci
+# storage
+db|lab2.(0).cnf
+db|lab2.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|fibonacci.vhd
+16ccab52a312415059192485d4fda037
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+NUMBITS
+32
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+multiplexor2a1
+# storage
+db|lab2.(3).cnf
+db|lab2.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|multiplexor2a1.vhd
+8085af7eb0a4b8ceb982f6a689720ce
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+numbits
+32
+PARAMETER_SIGNED_DEC
+USR
+ constraint(a)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_datapath:u1|multiplexor2a1:mux_n_max
+fibonacci_datapath:u1|multiplexor2a1:mux_n_fibonacci
+fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior1
+fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior2
+fibonacci_datapath:u1|multiplexor2a1:mux_data_o
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+reg
+# storage
+db|lab2.(4).cnf
+db|lab2.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|reg.vhd
+de30b9ddd4ce1cc9c68788dce64c312
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+numbits
+32
+PARAMETER_SIGNED_DEC
+USR
+ constraint(d)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_datapath:u1|reg:reg_n_max
+fibonacci_datapath:u1|reg:reg_n_fibonacci
+fibonacci_datapath:u1|reg:reg_n_anterior1
+fibonacci_datapath:u1|reg:reg_n_anterior2
+fibonacci_datapath:u1|reg:reg_1
+fibonacci_datapath:u1|reg:reg_0
+fibonacci_datapath:u1|reg:reg_data_o
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+somador
+# storage
+db|lab2.(5).cnf
+db|lab2.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|somador.vhd
+32b9e9ae8be6318c3d422bc94276d7b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+numbits
+32
+PARAMETER_SIGNED_DEC
+USR
+ constraint(x)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(y)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(xy)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_datapath:u1|somador:somador_n_anterior1_n_anterior2
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+subtrator
+# storage
+db|lab2.(6).cnf
+db|lab2.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|subtrator.vhd
+9dd055d2bdc7d161d33f1dc8291fca63
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+numbits
+32
+PARAMETER_SIGNED_DEC
+USR
+ constraint(x)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(y)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(xy)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_datapath:u1|subtrator:subtrator_n_max_1
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+igual
+# storage
+db|lab2.(7).cnf
+db|lab2.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|igual.vhd
+fa776232aca595d5ddca9e6777e49
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+numbits
+32
+PARAMETER_SIGNED_DEC
+USR
+ constraint(a)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_datapath:u1|igual:igual_n_max_0
+fibonacci_datapath:u1|igual:igual_n_max_1
+fibonacci_datapath:u1|igual:igual_n_max_2
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+fibonacci_pc
+# storage
+db|lab2.(1).cnf
+db|lab2.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|fibonacci_pc.vhd
+f17bf411ee62e92962477a4c3df7c4a4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(status_o)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_pc:u0
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+fibonacci_datapath
+# storage
+db|lab2.(2).cnf
+db|lab2.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|projects|cis3|lab01|src|fibonacci_datapath.vhd
+dcbf1ca0963294cf373fa11b2de888
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+numbits
+32
+PARAMETER_SIGNED_DEC
+USR
+ constraint(data_in)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_o)
+31 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fibonacci_datapath:u1
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

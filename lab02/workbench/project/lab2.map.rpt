@@ -1,0 +1,624 @@
+Analysis & Synthesis report for lab2
+Fri Sep 15 12:03:31 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |fibonacci|fibonacci_pc:u0|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |fibonacci
+ 13. Parameter Settings for User Entity Instance: fibonacci_datapath:u1
+ 14. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_max
+ 15. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_fibonacci
+ 16. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior1
+ 17. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior2
+ 18. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_data_o
+ 19. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_max
+ 20. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_fibonacci
+ 21. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_anterior1
+ 22. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_anterior2
+ 23. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_1
+ 24. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_0
+ 25. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_data_o
+ 26. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|somador:somador_n_anterior1_n_anterior2
+ 27. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|subtrator:subtrator_n_max_1
+ 28. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|igual:igual_n_max_0
+ 29. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|igual:igual_n_max_1
+ 30. Parameter Settings for User Entity Instance: fibonacci_datapath:u1|igual:igual_n_max_2
+ 31. Port Connectivity Checks: "fibonacci_datapath:u1|reg:reg_0"
+ 32. Port Connectivity Checks: "fibonacci_datapath:u1|reg:reg_1"
+ 33. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Fri Sep 15 12:03:31 2017         ;
+; Quartus II Version            ; 9.1 Build 304 01/25/2010 SP 1 SJ Full Version ;
+; Revision Name                 ; lab2                                          ;
+; Top-level Entity Name         ; fibonacci                                     ;
+; Family                        ; Stratix II                                    ;
+; Logic utilization             ; N/A                                           ;
+;     Combinational ALUTs       ; 100                                           ;
+;     Dedicated logic registers ; 175                                           ;
+; Total registers               ; 175                                           ;
+; Total pins                    ; 71                                            ;
+; Total virtual pins            ; 0                                             ;
+; Total block memory bits       ; 0                                             ;
+; DSP block 9-bit elements      ; 0                                             ;
+; Total PLLs                    ; 0                                             ;
+; Total DLLs                    ; 0                                             ;
++-------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; fibonacci          ; lab2               ;
+; Family name                                                                ; Stratix II         ; Stratix II         ;
+; Type of Retiming Performed During Resynthesis                              ; Full               ;                    ;
+; Resynthesis Optimization Effort                                            ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                                   ; Normal             ;                    ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++---------------------------------------------------------+-----------------+-----------------+---------------------------------------------------+
+; File Name with User-Entered Path                        ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ;
++---------------------------------------------------------+-----------------+-----------------+---------------------------------------------------+
+; ../../../projects/cis3/lab01/src/fibonacci.vhd          ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/fibonacci.vhd          ;
+; ../../../projects/cis3/lab01/src/fibonacci_datapath.vhd ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/fibonacci_datapath.vhd ;
+; ../../../projects/cis3/lab01/src/fibonacci_pc.vhd       ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/fibonacci_pc.vhd       ;
+; ../../../projects/cis3/lab01/src/igual.vhd              ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/igual.vhd              ;
+; ../../../projects/cis3/lab01/src/multiplexor2a1.vhd     ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/multiplexor2a1.vhd     ;
+; ../../../projects/cis3/lab01/src/reg.vhd                ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/reg.vhd                ;
+; ../../../projects/cis3/lab01/src/somador.vhd            ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/somador.vhd            ;
+; ../../../projects/cis3/lab01/src/subtrator.vhd          ; yes             ; User VHDL File  ; X:/projects/cis3/lab01/src/subtrator.vhd          ;
++---------------------------------------------------------+-----------------+-----------------+---------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 100   ;
+; Dedicated logic registers                     ; 175   ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 0     ;
+;                                               ;       ;
+; Total combinational functions                 ; 100   ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 0     ;
+;     -- 6 input functions                      ; 8     ;
+;     -- 5 input functions                      ; 5     ;
+;     -- 4 input functions                      ; 3     ;
+;     -- <=3 input functions                    ; 84    ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 36    ;
+;     -- extended LUT mode                      ; 0     ;
+;     -- arithmetic mode                        ; 32    ;
+;     -- shared arithmetic mode                 ; 32    ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 190   ;
+;                                               ;       ;
+; Total registers                               ; 175   ;
+;     -- Dedicated logic registers              ; 175   ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 95    ;
+;                                               ;       ;
+; I/O pins                                      ; 71    ;
+; Maximum fan-out node                          ; clk   ;
+; Maximum fan-out                               ; 175   ;
+; Total fan-out                                 ; 1239  ;
+; Average fan-out                               ; 3.58  ;
++-----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+; |fibonacci                                      ; 100 (0)           ; 175 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 71   ; 0            ; |fibonacci                                                               ; work         ;
+;    |fibonacci_datapath:u1|                      ; 73 (0)            ; 161 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1                                         ; work         ;
+;       |igual:igual_n_max_1|                     ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|igual:igual_n_max_1                     ; work         ;
+;       |multiplexor2a1:mux_n_anterior1|          ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior1          ; work         ;
+;       |reg:reg_1|                               ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|reg:reg_1                               ; work         ;
+;       |reg:reg_data_o|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|reg:reg_data_o                          ; work         ;
+;       |reg:reg_n_anterior1|                     ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|reg:reg_n_anterior1                     ; work         ;
+;       |reg:reg_n_anterior2|                     ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|reg:reg_n_anterior2                     ; work         ;
+;       |reg:reg_n_fibonacci|                     ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|reg:reg_n_fibonacci                     ; work         ;
+;       |reg:reg_n_max|                           ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|reg:reg_n_max                           ; work         ;
+;       |somador:somador_n_anterior1_n_anterior2| ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|somador:somador_n_anterior1_n_anterior2 ; work         ;
+;       |subtrator:subtrator_n_max_1|             ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_datapath:u1|subtrator:subtrator_n_max_1             ; work         ;
+;    |fibonacci_pc:u0|                            ; 27 (27)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |fibonacci|fibonacci_pc:u0                                               ;              ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |fibonacci|fibonacci_pc:u0|state                                                                                                                                                                                                   ;
++----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name           ; state.estado13 ; state.estado12 ; state.estado11 ; state.estado10 ; state.estado9 ; state.estado8 ; state.estado7 ; state.estado6 ; state.estado5 ; state.estado4 ; state.estado3 ; state.estado2 ; state.estado1 ; state.estado0 ;
++----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; state.estado0  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; state.estado1  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; state.estado2  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; state.estado3  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; state.estado4  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado5  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado6  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado7  ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado8  ; 0              ; 0              ; 0              ; 0              ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado9  ; 0              ; 0              ; 0              ; 0              ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado10 ; 0              ; 0              ; 0              ; 1              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado11 ; 0              ; 0              ; 1              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado12 ; 0              ; 1              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state.estado13 ; 1              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal           ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------------+------------------------+
+; fibonacci_pc:u0|m_d                                ; fibonacci_pc:u0|l_d           ; yes                    ;
+; fibonacci_pc:u0|m_fib                              ; fibonacci_pc:u0|WideOr11      ; yes                    ;
+; fibonacci_pc:u0|l_fib                              ; fibonacci_pc:u0|WideOr12      ; yes                    ;
+; fibonacci_pc:u0|m_max                              ; fibonacci_pc:u0|WideOr8       ; yes                    ;
+; fibonacci_pc:u0|l_max                              ; fibonacci_pc:u0|WideOr9       ; yes                    ;
+; fibonacci_pc:u0|m_a2                               ; fibonacci_pc:u0|WideOr6       ; yes                    ;
+; fibonacci_pc:u0|l_a2                               ; fibonacci_pc:u0|l_a2          ; yes                    ;
+; fibonacci_pc:u0|m_a1                               ; fibonacci_pc:u0|WideOr4       ; yes                    ;
+; fibonacci_pc:u0|l_a1                               ; fibonacci_pc:u0|state.estado0 ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                               ;                        ;
++----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; fibonacci_datapath:u1|reg:reg_0|q[0..31] ; Stuck at GND due to stuck port data_in ;
+; fibonacci_datapath:u1|reg:reg_1|q[1..31] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 63   ;                                        ;
++------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 175   ;
+; Number of registers using Synchronous Clear  ; 95    ;
+; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Asynchronous Clear ; 175   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 160   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |fibonacci ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; NUMBITS        ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; numbits        ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_max ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_fibonacci ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior1 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_n_anterior2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|multiplexor2a1:mux_data_o ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_max ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_fibonacci ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_anterior1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_n_anterior2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_1 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_0 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|reg:reg_data_o ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|somador:somador_n_anterior1_n_anterior2 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|subtrator:subtrator_n_max_1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|igual:igual_n_max_0 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|igual:igual_n_max_1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fibonacci_datapath:u1|igual:igual_n_max_2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; numbits        ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "fibonacci_datapath:u1|reg:reg_0" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; load ; Input ; Info     ; Stuck at VCC                      ;
+; d    ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "fibonacci_datapath:u1|reg:reg_1" ;
++----------+-------+----------+-------------------------------+
+; Port     ; Type  ; Severity ; Details                       ;
++----------+-------+----------+-------------------------------+
+; load     ; Input ; Info     ; Stuck at VCC                  ;
+; d[31..1] ; Input ; Info     ; Stuck at GND                  ;
+; d[0]     ; Input ; Info     ; Stuck at VCC                  ;
++----------+-------+----------+-------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Sep 15 12:03:29 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/fibonacci.vhd
+    Info: Found design unit 1: fibonacci-behavior
+    Info: Found entity 1: fibonacci
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/fibonacci_datapath.vhd
+    Info: Found design unit 1: fibonacci_datapath-behavior
+    Info: Found entity 1: fibonacci_datapath
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/fibonacci_pc.vhd
+    Info: Found design unit 1: fibonacci_pc-fsdm
+    Info: Found entity 1: fibonacci_pc
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/fibonacci_tb.vhd
+    Info: Found design unit 1: fibonacci_tb-behav
+    Info: Found entity 1: fibonacci_tb
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/igual.vhd
+    Info: Found design unit 1: igual-behavior
+    Info: Found entity 1: igual
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/multiplexor2a1.vhd
+    Info: Found design unit 1: multiplexor2a1-mux2a1
+    Info: Found entity 1: multiplexor2a1
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/reg.vhd
+    Info: Found design unit 1: reg-behavior
+    Info: Found entity 1: reg
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/somador.vhd
+    Info: Found design unit 1: somador-Behavioral
+    Info: Found entity 1: somador
+Info: Found 2 design units, including 1 entities, in source file /projects/cis3/lab01/src/subtrator.vhd
+    Info: Found design unit 1: subtrator-Behavioral
+    Info: Found entity 1: subtrator
+Info: Elaborating entity "fibonacci" for the top level hierarchy
+Info: Elaborating entity "fibonacci_pc" for hierarchy "fibonacci_pc:u0"
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "m_d", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "m_a1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "l_a1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "m_a2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "l_a2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "m_max", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "l_max", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "m_fib", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fibonacci_pc.vhd(122): inferring latch(es) for signal or variable "l_fib", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "l_fib" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "m_fib" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "l_max" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "m_max" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "l_a2" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "m_a2" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "l_a1" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "m_a1" at fibonacci_pc.vhd(122)
+Info (10041): Inferred latch for "m_d" at fibonacci_pc.vhd(122)
+Info: Elaborating entity "fibonacci_datapath" for hierarchy "fibonacci_datapath:u1"
+Info: Elaborating entity "multiplexor2a1" for hierarchy "fibonacci_datapath:u1|multiplexor2a1:mux_n_max"
+Info: Elaborating entity "reg" for hierarchy "fibonacci_datapath:u1|reg:reg_n_max"
+Info: Elaborating entity "somador" for hierarchy "fibonacci_datapath:u1|somador:somador_n_anterior1_n_anterior2"
+Info: Elaborating entity "subtrator" for hierarchy "fibonacci_datapath:u1|subtrator:subtrator_n_max_1"
+Info: Elaborating entity "igual" for hierarchy "fibonacci_datapath:u1|igual:igual_n_max_0"
+Warning: Latch fibonacci_pc:u0|m_d has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fibonacci_pc:u0|state.estado13
+Warning: Latch fibonacci_pc:u0|m_fib has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fibonacci_pc:u0|state.estado9
+Warning: Latch fibonacci_pc:u0|m_max has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fibonacci_pc:u0|state.estado12
+Warning: Latch fibonacci_pc:u0|m_a2 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fibonacci_pc:u0|state.estado10
+Warning: Latch fibonacci_pc:u0|m_a1 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fibonacci_pc:u0|state.estado11
+Info: Implemented 273 device resources after synthesis - the final resource count might be different
+    Info: Implemented 36 input pins
+    Info: Implemented 35 output pins
+    Info: Implemented 202 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 239 megabytes
+    Info: Processing ended: Fri Sep 15 12:03:31 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

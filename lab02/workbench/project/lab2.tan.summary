@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.633 ns
+From           : data_in[30]
+To             : fibonacci_datapath:u1|reg:reg_n_max|q[30]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.971 ns
+From           : fibonacci_pc:u0|state.estado13
+To             : status_o[0]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.953 ns
+From           : read_enable_i
+To             : fibonacci_pc:u0|state.estado13
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 148.32 MHz ( period = 6.742 ns )
+From           : fibonacci_pc:u0|l_max
+To             : fibonacci_datapath:u1|reg:reg_n_max|q[16]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : fibonacci_pc:u0|state.estado12
+To             : fibonacci_pc:u0|m_max
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 9
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 9
+
+--------------------------------------------------------------------------------------
+

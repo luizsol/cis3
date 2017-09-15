@@ -1,0 +1,17 @@
+
+State Machine - |fibonacci|fibonacci_pc:u0|state
+Name state.estado13 state.estado12 state.estado11 state.estado10 state.estado9 state.estado8 state.estado7 state.estado6 state.estado5 state.estado4 state.estado3 state.estado2 state.estado1 state.estado0 
+state.estado0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.estado1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.estado2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.estado3 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.estado4 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.estado5 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.estado6 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.estado7 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.estado8 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.estado9 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.estado10 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.estado11 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.estado12 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.estado13 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

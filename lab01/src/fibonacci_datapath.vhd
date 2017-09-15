@@ -179,7 +179,7 @@ BEGIN
     PORT MAP (
       rst =>     rst,
       clk =>     clk,
-      load  =>   rst,
+      load  =>   '1',
       d   =>     (0 => '1', OTHERS => '0'),
       q   =>     reg_1_out);
 
@@ -188,9 +188,18 @@ BEGIN
     PORT MAP (
       rst =>     rst,
       clk =>     clk,
-      load  =>   rst,
+      load  =>   '1',
       d   =>     (0 => '0', OTHERS => '0'),
       q   =>     reg_0_out);
+	  
+   reg_data_o: reg
+    GENERIC MAP(NUMBITS => NUMBITS)
+    PORT MAP (
+      rst =>     rst,
+      clk =>     clk,
+      load  =>   l_d,
+      d   =>     mux_data_o_out,
+      q   =>     data_o);
 
 -- Somadores
   somador_n_anterior1_n_anterior2: somador
@@ -222,6 +231,13 @@ BEGIN
         a =>    reg_n_max_out,
         b =>    reg_1_out,
         eq  =>  flag2);
+  
+  igual_n_max_2: igual
+    GENERIC MAP(NUMBITS => NUMBITS)
+      PORT MAP (
+        a =>    reg_n_max_out,
+        b =>    reg_1_out,
+        eq  =>  flag3);
 
 END behavior;
 

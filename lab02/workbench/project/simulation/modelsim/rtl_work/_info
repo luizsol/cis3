@@ -1,0 +1,309 @@
+m255
+K3
+13
+cModel Technology
+Z0 dX:\psi2553\exp1b\project\simulation\modelsim
+Eestimulos
+Z1 w1505480191
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z5 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z6 8X:/psi2553/exp1b/project/../rtl/estimulos_rtl.vhd
+Z7 FX:/psi2553/exp1b/project/../rtl/estimulos_rtl.vhd
+l0
+L13
+VJ7JHaU=NPFMYJFmQ0e5:S3
+Z8 OV;C;6.5b;42
+31
+Z9 o-93 -work work -O0
+Z10 tExplicit 1
+!s100 <l<PKKUT6`jLSITXL`6200
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 9 estimulos 0 22 J7JHaU=NPFMYJFmQ0e5:S3
+l31
+L24
+VPO^kkkVMZR<_RGkn=40id2
+R8
+31
+Z11 Mx4 4 ieee 14 std_logic_1164
+Z12 Mx3 4 ieee 18 std_logic_unsigned
+Z13 Mx2 4 ieee 15 std_logic_arith
+Z14 Mx1 4 ieee 11 numeric_std
+R9
+R10
+!s100 YEc3K4]Qd0oMBXPW[<PQ12
+Efibonacci
+Z15 w1505472081
+R2
+R3
+R5
+Z16 8X:/projects/cis3/lab01/src/fibonacci.vhd
+Z17 FX:/projects/cis3/lab01/src/fibonacci.vhd
+l0
+L15
+Vf;^3_5Yo9E>?5e]]d>0cJ0
+R8
+31
+R9
+R10
+!s100 2U4`zRWK^4F@Za5MG;V6S1
+Abehavior
+R2
+R3
+R5
+DEx4 work 9 fibonacci 0 22 f;^3_5Yo9E>?5e]]d>0cJ0
+l98
+L28
+V5el[Q2DFJ`Kh;=:fOKVd23
+R8
+31
+Z18 Mx3 4 ieee 14 std_logic_1164
+R13
+R14
+R9
+R10
+!s100 cbh4m@MRSaVA:9fHZDMD]3
+Efibonacci_datapath
+Z19 w1505478810
+R2
+R3
+R5
+Z20 8X:/projects/cis3/lab01/src/fibonacci_datapath.vhd
+Z21 FX:/projects/cis3/lab01/src/fibonacci_datapath.vhd
+l0
+L12
+VS?aLVR>@?ciX4lj6?gYVm2
+R8
+31
+R9
+R10
+!s100 D^>M1ERBF2azHOdz?EOSM0
+Abehavior
+R2
+R3
+R5
+DEx4 work 18 fibonacci_datapath 0 22 S?aLVR>@?ciX4lj6?gYVm2
+l98
+L39
+Vn8`VN9Pi?<7A0EGiGoJ_z3
+R8
+31
+R18
+R13
+R14
+R9
+R10
+!s100 Oa35:0>UM4n`gTz>DQbR42
+Efibonacci_pc
+Z22 w1505477600
+R5
+Z23 8X:/projects/cis3/lab01/src/fibonacci_pc.vhd
+Z24 FX:/projects/cis3/lab01/src/fibonacci_pc.vhd
+l0
+L9
+VA0K[MVDENgUY5GhBf;_;71
+R8
+31
+R9
+R10
+!s100 ?^A`9L0D]6jC:_@4^>^R00
+Afsdm
+R5
+DEx4 work 12 fibonacci_pc 0 22 A0K[MVDENgUY5GhBf;_;71
+l42
+L36
+V7AjHDb<hJd7X=CeafJ`E51
+R8
+31
+Z25 Mx1 4 ieee 14 std_logic_1164
+R9
+R10
+!s100 fKJkQBNS7fgmSaE=6zOKi2
+Efibonacci_tbw
+Z26 w1505475444
+R2
+R3
+R4
+R5
+Z27 8X:/psi2553/exp1b/project/../rtl/fibonacci_tbw_rtl.vhd
+Z28 FX:/psi2553/exp1b/project/../rtl/fibonacci_tbw_rtl.vhd
+l0
+L10
+VSmG[DojCNFIOeN?Lz:eoY1
+!s100 MYQGWJj:k[Zh6eF_ZVl<I0
+R8
+31
+R9
+R10
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 13 fibonacci_tbw 0 22 SmG[DojCNFIOeN?Lz:eoY1
+l53
+L14
+VR:<M:4^dI_ob^WMDQiNg31
+!s100 fG46ODLFlGMaGSYoo`5=g2
+R8
+31
+R11
+R12
+R13
+R14
+R9
+R10
+Eigual
+R15
+R2
+R3
+R5
+Z29 8X:/projects/cis3/lab01/src/igual.vhd
+Z30 FX:/projects/cis3/lab01/src/igual.vhd
+l0
+L13
+VaVK[=ED][XH]AJ:CEQAGJ2
+R8
+31
+R9
+R10
+!s100 Raj98V=Qj7P6mIn]=a?F:1
+Abehavior
+R2
+R3
+R5
+DEx4 work 5 igual 0 22 aVK[=ED][XH]AJ:CEQAGJ2
+l22
+L20
+VPGg9;TfeLUbAaL9C_RA?H0
+R8
+31
+R18
+R13
+R14
+R9
+R10
+!s100 <8n2cg<n521idlE[b?>g?3
+Emultiplexor2a1
+R15
+R5
+Z31 8X:/projects/cis3/lab01/src/multiplexor2a1.vhd
+Z32 FX:/projects/cis3/lab01/src/multiplexor2a1.vhd
+l0
+L11
+VXHEDEPHR2bdU17We83N?i2
+R8
+31
+R9
+R10
+!s100 WdW4VzmmOEm;_C[AMnOoE0
+Amux2a1
+R5
+DEx4 work 14 multiplexor2a1 0 22 XHEDEPHR2bdU17We83N?i2
+l21
+L19
+VPEdYnlkhGbmBeec5HIAgF2
+R8
+31
+R25
+R9
+R10
+!s100 KTTlFcICAO82T8kLZZj^a2
+Ereg
+R15
+R2
+R3
+R5
+Z33 8X:/projects/cis3/lab01/src/reg.vhd
+Z34 FX:/projects/cis3/lab01/src/reg.vhd
+l0
+L13
+VlN>WTk^EGSzan>4jg2A;a2
+R8
+31
+R9
+R10
+!s100 m1:^Vi>GXRECz3fN90ail0
+Abehavior
+R2
+R3
+R5
+DEx4 work 3 reg 0 22 lN>WTk^EGSzan>4jg2A;a2
+l24
+L22
+V2dEbmHFWQJP2?=hDfPJlT1
+R8
+31
+R18
+R13
+R14
+R9
+R10
+!s100 <J5DzLlg[[b1l8JToN7Xk0
+Esomador
+Z35 w1505473346
+R4
+R3
+R5
+Z36 8X:/projects/cis3/lab01/src/somador.vhd
+Z37 FX:/projects/cis3/lab01/src/somador.vhd
+l0
+L14
+VSlj^9BCOYHTE9`LP?hDWL2
+R8
+31
+R9
+R10
+!s100 Se>Wj9]nnDe4hoo0eF1la2
+Abehavioral
+R4
+R3
+R5
+DEx4 work 7 somador 0 22 Slj^9BCOYHTE9`LP?hDWL2
+l25
+L21
+VzIfN8OiXTL6Z=zc35?koa3
+R8
+31
+R18
+R13
+Z38 Mx1 4 ieee 18 std_logic_unsigned
+R9
+R10
+!s100 Ri==]JR=jn16RnYYeNf``3
+Esubtrator
+Z39 w1505473356
+R4
+R3
+R5
+Z40 8X:/projects/cis3/lab01/src/subtrator.vhd
+Z41 FX:/projects/cis3/lab01/src/subtrator.vhd
+l0
+L10
+VWTE3N457Po8E4=VA;U@2`1
+R8
+31
+R9
+R10
+!s100 HTKEE5hHU^9`jI;k=<zo_0
+Abehavioral
+R4
+R3
+R5
+DEx4 work 9 subtrator 0 22 WTE3N457Po8E4=VA;U@2`1
+l21
+L17
+VGKkGmTb8`ASb3^dXBo8W31
+R8
+31
+R18
+R13
+R38
+R9
+R10
+!s100 dKKPPBK0d4^`GQ4Q9LnA>0

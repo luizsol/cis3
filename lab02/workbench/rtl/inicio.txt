@@ -1,0 +1,28 @@
+--Elaborado por:
+--MSc. Mario Raffo : mraffo@lme.usp.br
+--Membro do GSEIS
+--Doutorando em Engenharia Elétrica
+--Universidade de São Paulo
+
+view structure
+view signals
+
+vsim fibonacci_tbw -voptargs="+acc"
+
+add wave \
+{sim:/fibonacci_tbw/rst } \
+{sim:/fibonacci_tbw/clk } \
+{sim:/fibonacci_tbw/write_enable } \
+{sim:/fibonacci_tbw/data_to_fibonacci } \
+{sim:/fibonacci_tbw/read_enable } \
+{sim:/fibonacci_tbw/data_from_fibonacci } \
+{sim:/fibonacci_tbw/status } \
+{sim:/fibonacci_tbw/irq }
+add wave sim:/fibonacci_tbw/fibo/u0/state
+add wave sim:/fibonacci_tbw/fibo/u0/next_state
+add wave sim:/fibonacci_tbw/fibo/u1/reg_n_fibonacci_out
+
+
+run 1.0 ms
+
+

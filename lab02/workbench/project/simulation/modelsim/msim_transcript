@@ -1,0 +1,167 @@
+# Reading C:/altera/91/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab2_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\91\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {X:/projects/cis3/lab01/src/fibonacci.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package numeric_std
+# -- Compiling entity fibonacci
+# -- Compiling architecture behavior of fibonacci
+# vcom -93 -work work {X:/projects/cis3/lab01/src/fibonacci_datapath.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package numeric_std
+# -- Compiling entity fibonacci_datapath
+# -- Compiling architecture behavior of fibonacci_datapath
+# ** Warning: X:/projects/cis3/lab01/src/fibonacci_datapath.vhd(183): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# ** Warning: X:/projects/cis3/lab01/src/fibonacci_datapath.vhd(192): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# vcom -93 -work work {X:/projects/cis3/lab01/src/fibonacci_pc.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity fibonacci_pc
+# -- Compiling architecture fsdm of fibonacci_pc
+# vcom -93 -work work {X:/projects/cis3/lab01/src/igual.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package numeric_std
+# -- Compiling entity igual
+# -- Compiling architecture behavior of igual
+# vcom -93 -work work {X:/projects/cis3/lab01/src/multiplexor2a1.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity multiplexor2a1
+# -- Compiling architecture mux2a1 of multiplexor2a1
+# vcom -93 -work work {X:/projects/cis3/lab01/src/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package numeric_std
+# -- Compiling entity reg
+# -- Compiling architecture behavior of reg
+# vcom -93 -work work {X:/projects/cis3/lab01/src/somador.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity somador
+# -- Compiling architecture behavioral of somador
+# vcom -93 -work work {X:/projects/cis3/lab01/src/subtrator.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity subtrator
+# -- Compiling architecture behavioral of subtrator
+# 
+# vcom -93 -work work {X:/psi2553/exp1b/project/../rtl/estimulos_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity estimulos
+# -- Compiling architecture behavior of estimulos
+# vcom -93 -work work {X:/psi2553/exp1b/project/../rtl/fibonacci_tbw_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity fibonacci_tbw
+# -- Compiling architecture behavior of fibonacci_tbw
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L stratixii -L rtl_work -L work -voptargs="+acc" fibonacci_tbw
+# vsim -L altera -L lpm -L sgate -L altera_mf -L stratixii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps fibonacci_tbw 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fibonacci_tbw(behavior)
+# Loading work.fibonacci(behavior)
+# Loading work.fibonacci_pc(fsdm)
+# Loading work.fibonacci_datapath(behavior)
+# Loading work.multiplexor2a1(mux2a1)
+# Loading work.reg(behavior)
+# Loading work.somador(behavioral)
+# Loading work.subtrator(behavioral)
+# Loading work.igual(behavior)
+# Loading work.estimulos(behavior)
+# 
+# do X:/psi2553/exp1b/project/../rtl/inicio.txt
+# --Elaborado por:
+# --MSc. Mario Raffo : mraffo@lme.usp.br
+# --Membro do GSEIS
+# --Doutorando em Engenharia Elétrica
+# --Universidade de São Paulo
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body
+# 
+# vsim fibonacci_tbw -voptargs="+acc"
+# vsim -voptargs=\"+acc\" fibonacci_tbw 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fibonacci_tbw(behavior)
+# Loading work.fibonacci(behavior)
+# Loading work.fibonacci_pc(fsdm)
+# Loading work.fibonacci_datapath(behavior)
+# Loading work.multiplexor2a1(mux2a1)
+# Loading work.reg(behavior)
+# Loading work.somador(behavioral)
+# Loading work.subtrator(behavioral)
+# Loading work.igual(behavior)
+# Loading work.estimulos(behavior)
+# 
+# add wave \
+# {sim:/fibonacci_tbw/rst } \
+# {sim:/fibonacci_tbw/clk } \
+# {sim:/fibonacci_tbw/write_enable } \
+# {sim:/fibonacci_tbw/data_to_fibonacci } \
+# {sim:/fibonacci_tbw/read_enable } \
+# {sim:/fibonacci_tbw/data_from_fibonacci } \
+# {sim:/fibonacci_tbw/status } \
+# {sim:/fibonacci_tbw/irq }
+# add wave sim:/fibonacci_tbw/fibo/u0/state
+# add wave sim:/fibonacci_tbw/fibo/u0/next_state
+# add wave sim:/fibonacci_tbw/fibo/u1/reg_n_fibonacci_out
+# 
+# 
+# run 1.0 ms
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fibonacci_tbw/fibo/u1/subtrator_n_max_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fibonacci_tbw/fibo/u1/subtrator_n_max_1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fibonacci_tbw/fibo/u1/somador_n_anterior1_n_anterior2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fibonacci_tbw/fibo/u1/somador_n_anterior1_n_anterior2
+# 
+# 
