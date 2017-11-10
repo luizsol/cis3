@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.265 ns
+From           : gpioA_in[15]
+To             : mlite_cpu:u1_cpu|pipeline:\pipeline3:u9_pipeline|reg_dest_reg[31]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 22.203 ns
+From           : mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|opcode_reg[5]
+To             : data_write[17]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.320 ns
+From           : reset
+To             : mlite_cpu:u1_cpu|mem_ctrl:u2_mem_ctrl|address_reg[28]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 45.75 MHz ( period = 21.858 ns )
+From           : mlite_cpu:u1_cpu|pipeline:\pipeline3:u9_pipeline|alu_funcD[2]
+To             : ram:u2_ram|lpm_ram_dq:\altera_ram:lpm_ram_io_component3|altram:sram|altsyncram:ram_block|altsyncram_8k91:auto_generated|ram_block1a2~porta_we_reg
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

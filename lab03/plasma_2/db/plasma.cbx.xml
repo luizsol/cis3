@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="plasma">
+		<CBX_INST_ENTRY INSTANCE_NAME="|plasma|ram:u2_ram|LPM_RAM_DQ:\altera_ram:lpm_ram_io_component0|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_5k91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|plasma|ram:u2_ram|LPM_RAM_DQ:\altera_ram:lpm_ram_io_component1|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_6k91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|plasma|ram:u2_ram|LPM_RAM_DQ:\altera_ram:lpm_ram_io_component2|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_7k91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|plasma|ram:u2_ram|LPM_RAM_DQ:\altera_ram:lpm_ram_io_component3|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_8k91.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

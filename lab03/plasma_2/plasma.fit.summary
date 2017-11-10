@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Nov 10 10:53:29 2017
+Quartus II 64-Bit Version : 9.1 Build 304 01/25/2010 SP 1 SJ Full Version
+Revision Name : plasma
+Top-level Entity Name : plasma
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 4,212 / 33,216 ( 13 % )
+    Total combinational functions : 3,890 / 33,216 ( 12 % )
+    Dedicated logic registers : 1,556 / 33,216 ( 5 % )
+Total registers : 1556
+Total pins : 169 / 475 ( 36 % )
+Total virtual pins : 0
+Total memory bits : 65,536 / 483,840 ( 14 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

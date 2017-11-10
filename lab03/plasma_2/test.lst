@@ -1,0 +1,51 @@
+
+test.axf:     file format elf32-bigmips
+
+No symbols in "test.axf".
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	3c1c0001 	lui	$gp,0x1
+   4:	279c80b8 	addiu	$gp,$gp,-32584
+   8:	3c050000 	lui	$a1,0x0
+   c:	24a500c8 	addiu	$a1,$a1,200
+  10:	3c040000 	lui	$a0,0x0
+  14:	24840150 	addiu	$a0,$a0,336
+  18:	3c1d0000 	lui	$sp,0x0
+  1c:	27bd02b8 	addiu	$sp,$sp,696
+  20:	aca00000 	sw	$zero,0($a1)
+  24:	00a4182a 	slt	$v1,$a1,$a0
+  28:	1460fffd 	bnez	$v1,0x20
+  2c:	24a50004 	addiu	$a1,$a1,4
+  30:	0c000020 	jal	0x80
+  34:	00000000 	nop
+  38:	0800000e 	j	0x38
+  3c:	24060001 	li	$a2,1
+  40:	00003825 	move	$a3,$zero
+  44:	2c820002 	sltiu	$v0,$a0,2
+  48:	10400007 	beqz	$v0,0x68
+  4c:	00e01825 	move	$v1,$a3
+  50:	10000009 	b	0x78
+  54:	aca40000 	sw	$a0,0($a1)
+  58:	00c71821 	addu	$v1,$a2,$a3
+  5c:	00c03825 	move	$a3,$a2
+  60:	00603025 	move	$a2,$v1
+  64:	2484ffff 	addiu	$a0,$a0,-1
+  68:	28820002 	slti	$v0,$a0,2
+  6c:	1040fffa 	beqz	$v0,0x58
+  70:	00000000 	nop
+  74:	aca30000 	sw	$v1,0($a1)
+  78:	03e00008 	jr	$ra
+  7c:	00000000 	nop
+  80:	27bdffd8 	addiu	$sp,$sp,-40
+  84:	afbf0020 	sw	$ra,32($sp)
+  88:	afa00010 	sw	$zero,16($sp)
+  8c:	2402001f 	li	$v0,31
+  90:	afa20014 	sw	$v0,20($sp)
+  94:	00402025 	move	$a0,$v0
+  98:	0c00000f 	jal	0x3c
+  9c:	27a50018 	addiu	$a1,$sp,24
+  a0:	8fbf0020 	lw	$ra,32($sp)
+  a4:	00001025 	move	$v0,$zero
+  a8:	03e00008 	jr	$ra
+  ac:	27bd0028 	addiu	$sp,$sp,40
